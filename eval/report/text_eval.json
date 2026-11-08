@@ -1,0 +1,2702 @@
+{
+  "rows": [
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "Lanczos",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "保守",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "标准增强",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护11",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护12",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护13",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护14",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护16",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "强力修复",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.31
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护11",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护12",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护13",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护14",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护16",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "Lanczos",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "保守",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "标准增强",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.069
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护11",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.069
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护12",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.069
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护13",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.069
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护14",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.069
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护16",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.069
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "强力修复",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护11",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.034
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护12",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.034
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护13",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.034
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护14",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.034
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护16",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.034
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "Lanczos",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "保守",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "标准增强",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护11",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护12",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护13",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护14",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "标准增强+保护16",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "强力修复",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.31
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护11",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护12",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护13",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护14",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 4.0,
+      "method": "强力修复+保护16",
+      "n": 29,
+      "read_ok": 0.0,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.9
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.067,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.967
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.2
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.5
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.0,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.9
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.167,
+      "wrong": 0.8
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 6.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.033,
+      "wrong": 0.933
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "Lanczos",
+      "n": 36,
+      "read_ok": 0.611,
+      "wrong": 0.389
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "保守",
+      "n": 36,
+      "read_ok": 0.556,
+      "wrong": 0.417
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "标准增强",
+      "n": 36,
+      "read_ok": 0.722,
+      "wrong": 0.278
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护11",
+      "n": 36,
+      "read_ok": 0.556,
+      "wrong": 0.417
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护12",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护13",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护14",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护16",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "强力修复",
+      "n": 36,
+      "read_ok": 0.639,
+      "wrong": 0.361
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护11",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护12",
+      "n": 36,
+      "read_ok": 0.556,
+      "wrong": 0.417
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护13",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护14",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护16",
+      "n": 36,
+      "read_ok": 0.528,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "Lanczos",
+      "n": 36,
+      "read_ok": 0.111,
+      "wrong": 0.694
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "保守",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.722
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "标准增强",
+      "n": 36,
+      "read_ok": 0.222,
+      "wrong": 0.722
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护11",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.806
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护12",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.778
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护13",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.75
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护14",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.75
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护16",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.75
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "强力修复",
+      "n": 36,
+      "read_ok": 0.111,
+      "wrong": 0.833
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护11",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.75
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护12",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.75
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护13",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.722
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护14",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.722
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护16",
+      "n": 36,
+      "read_ok": 0.083,
+      "wrong": 0.722
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "Lanczos",
+      "n": 36,
+      "read_ok": 0.556,
+      "wrong": 0.444
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "保守",
+      "n": 36,
+      "read_ok": 0.444,
+      "wrong": 0.556
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "标准增强",
+      "n": 36,
+      "read_ok": 0.75,
+      "wrong": 0.25
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护11",
+      "n": 36,
+      "read_ok": 0.583,
+      "wrong": 0.417
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护12",
+      "n": 36,
+      "read_ok": 0.5,
+      "wrong": 0.5
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护13",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护14",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "标准增强+保护16",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "强力修复",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.5
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护11",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护12",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护13",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护14",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 8.0,
+      "method": "强力修复+保护16",
+      "n": 36,
+      "read_ok": 0.472,
+      "wrong": 0.528
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "Lanczos",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "保守",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "标准增强",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护11",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护12",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护13",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护14",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护16",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "强力修复",
+      "n": 29,
+      "read_ok": 0.828,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护11",
+      "n": 29,
+      "read_ok": 0.828,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护12",
+      "n": 29,
+      "read_ok": 0.828,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护13",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护14",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护16",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "Lanczos",
+      "n": 29,
+      "read_ok": 0.828,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "保守",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "标准增强",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护11",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护12",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护13",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护14",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护16",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "强力修复",
+      "n": 29,
+      "read_ok": 0.655,
+      "wrong": 0.345
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护11",
+      "n": 29,
+      "read_ok": 0.655,
+      "wrong": 0.345
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护12",
+      "n": 29,
+      "read_ok": 0.655,
+      "wrong": 0.345
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护13",
+      "n": 29,
+      "read_ok": 0.724,
+      "wrong": 0.276
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护14",
+      "n": 29,
+      "read_ok": 0.828,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护16",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "Lanczos",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "保守",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "标准增强",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.138
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护11",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护12",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护13",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护14",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "标准增强+保护16",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "强力修复",
+      "n": 29,
+      "read_ok": 0.862,
+      "wrong": 0.103
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护11",
+      "n": 29,
+      "read_ok": 0.793,
+      "wrong": 0.172
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护12",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.207
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护13",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护14",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 10.0,
+      "method": "强力修复+保护16",
+      "n": 29,
+      "read_ok": 0.759,
+      "wrong": 0.241
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.8,
+      "wrong": 0.2
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.8,
+      "wrong": 0.2
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.867,
+      "wrong": 0.133
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.867,
+      "wrong": 0.133
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.767,
+      "wrong": 0.233
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.767,
+      "wrong": 0.233
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.133
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.133
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.867,
+      "wrong": 0.133
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 12.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.833,
+      "wrong": 0.167
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "Lanczos",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "保守",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "标准增强",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护11",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护12",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护13",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护14",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "标准增强+保护16",
+      "n": 30,
+      "read_ok": 0.9,
+      "wrong": 0.1
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "强力修复",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护11",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护12",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护13",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护14",
+      "n": 30,
+      "read_ok": 0.967,
+      "wrong": 0.033
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 14.0,
+      "method": "强力修复+保护16",
+      "n": 30,
+      "read_ok": 0.933,
+      "wrong": 0.067
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "Lanczos",
+      "n": 28,
+      "read_ok": 0.929,
+      "wrong": 0.071
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "保守",
+      "n": 28,
+      "read_ok": 0.857,
+      "wrong": 0.143
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "标准增强",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护11",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护12",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护13",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护14",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护16",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "强力修复",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护11",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护12",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护13",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护14",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护16",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "Lanczos",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "保守",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "标准增强",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护11",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护12",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护13",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护14",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护16",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "强力修复",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护11",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护12",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护13",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护14",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护16",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "Lanczos",
+      "n": 28,
+      "read_ok": 0.929,
+      "wrong": 0.071
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "保守",
+      "n": 28,
+      "read_ok": 0.929,
+      "wrong": 0.071
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "标准增强",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护11",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护12",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护13",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护14",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "标准增强+保护16",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "强力修复",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护11",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护12",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护13",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护14",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 16.0,
+      "method": "强力修复+保护16",
+      "n": 28,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "Lanczos",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "保守",
+      "n": 32,
+      "read_ok": 0.875,
+      "wrong": 0.125
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "标准增强",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护11",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护12",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护13",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护14",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护16",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "强力修复",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护11",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护12",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护13",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护14",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "compressed",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护16",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "Lanczos",
+      "n": 32,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "保守",
+      "n": 32,
+      "read_ok": 1.0,
+      "wrong": 0.0
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "标准增强",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护11",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护12",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护13",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护14",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护16",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "强力修复",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护11",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护12",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护13",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护14",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "defocus",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护16",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "Lanczos",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "保守",
+      "n": 32,
+      "read_ok": 0.875,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "标准增强",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护11",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护12",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护13",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护14",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "标准增强+保护16",
+      "n": 32,
+      "read_ok": 0.906,
+      "wrong": 0.094
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "强力修复",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护11",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护12",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护13",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护14",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    },
+    {
+      "degradation": "noisy",
+      "src_glyph_px": 20.0,
+      "method": "强力修复+保护16",
+      "n": 32,
+      "read_ok": 0.938,
+      "wrong": 0.062
+    }
+  ],
+  "detector_box_height_src_px_median": {
+    "4.0": 6.9,
+    "6.0": 9.3,
+    "8.0": 11.7,
+    "10.0": 14.4,
+    "12.0": 16.3,
+    "14.0": 17.5,
+    "16.0": 17.6,
+    "20.0": 23.5
+  }
+}

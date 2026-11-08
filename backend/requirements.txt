@@ -1,0 +1,16 @@
+# PyTorch is installed separately from the CUDA 12.8 index (required for RTX 50 series):
+#   uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pillow>=11.0
+numpy>=1.26
+opencv-python-headless>=4.10
+scikit-image>=0.24
+spandrel>=0.4
+pydantic>=2.7
+
+# dev / eval
+pytest>=8.0
+httpx>=0.27
+lpips>=0.1.4

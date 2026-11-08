@@ -1,0 +1,10 @@
+# Runtime dependencies of the packaged Windows app (no PyTorch: inference runs on
+# ONNX Runtime with DirectML / CPU). Versions pinned to what the release was tested with.
+fastapi==0.162.2
+uvicorn==0.54.0
+python-multipart==0.0.33
+pillow==13.0.0
+numpy==2.5.4
+opencv-python-headless==5.0.0.93
+pydantic==2.14.3
+onnxruntime-directml==1.24.4

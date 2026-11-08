@@ -1,0 +1,20 @@
+{
+  "files": 200,
+  "valid": 190,
+  "invalid_detected": 10,
+  "done": 190,
+  "failed": 0,
+  "failed_items": [],
+  "wrong_size": [],
+  "unreadable": [],
+  "zip_images": 190,
+  "zip_names_unique": true,
+  "killed_after": 67,
+  "reprocessed_after_restart": [
+    "商品_008.webp"
+  ],
+  "processing_seconds": 259.0,
+  "seconds_per_image": 1.36,
+  "review_flagged": 0,
+  "PASSED": true
+}

@@ -1,0 +1,25 @@
+# environments and tools
+backend/.venv/
+frontend/node_modules/
+tools/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# build outputs
+build/
+frontend/dist/
+
+# runtime data
+data/
+
+# model weights: downloaded by scripts/download_models.py, shipped inside the release zip
+models/*.pth
+models/*.onnx
+models/*.part
+eval/ocr/*.onnx
+
+# evaluation inputs/outputs that are large or not redistributable
+eval/golden/
+eval/report/crops/
+eval/report/index.html
