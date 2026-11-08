@@ -1,0 +1,14 @@
+# Runtime dependencies of the macOS package (macOS 13.4 Ventura or later).
+# onnxruntime 1.23.x binaries require 13.4 even though the wheels are tagged macosx_13_0.
+# Newest versions that still ship macOS 13 wheels for both Apple Silicon and Intel
+# (checked against PyPI platform tags; see README section 7):
+#   onnxruntime 1.24+ is macOS 14+ arm64 only; opencv 4.13+ needs macOS 14 on Intel;
+#   opencv 4.12 requires numpy < 2.3.
+fastapi==0.162.2
+uvicorn==0.54.0
+python-multipart==0.0.33
+pillow==13.0.0
+numpy==2.2.6
+opencv-python-headless==4.12.0.88
+pydantic==2.14.3
+onnxruntime==1.23.2

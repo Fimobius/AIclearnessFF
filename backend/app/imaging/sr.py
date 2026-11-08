@@ -1,17 +1,22 @@
 """Super-resolution engine: model registry and tiled inference on two backends.
 
 - "torch": PyTorch + spandrel, CUDA if available (development machine; fp16/bf16).
-- "onnx":  ONNX Runtime with DirectML (any DirectX 12 GPU: NVIDIA / AMD / Intel) and
-           automatic CPU fallback. Used by the packaged Windows app - no PyTorch needed.
+- "onnx":  ONNX Runtime with DirectML on Windows (any DX12 GPU: NVIDIA / AMD / Intel) or
+           CoreML on macOS (Apple GPU / Neural Engine), with automatic CPU fallback. Used by
+           the packaged apps - no PyTorch needed.
 Selected by AICLEAR_BACKEND = auto | torch | onnx (auto: torch+CUDA if present, else onnx).
 """
 from __future__ import annotations
 
+import json
 import logging
 import math
+import sys
 import threading
+import time
 from collections import OrderedDict
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Callable
 
 import numpy as np
@@ -276,53 +281,129 @@ class TorchEngine(SREngine):
 
 
 class OnnxEngine(SREngine):
-    """ONNX Runtime: DirectML on any DX12 GPU (prefers the high-performance adapter on
-    laptops with two GPUs), CPU otherwise or if the GPU path fails at runtime."""
+    """ONNX Runtime with a hardware-accelerated execution provider where available:
+    DirectML on Windows (any DX12 GPU; prefers the high-performance adapter on laptops with
+    two GPUs), CoreML on macOS (Apple GPU / Neural Engine). Falls back to CPU.
+
+    The accelerated path is only trusted after a one-time check per model: one tile is run on
+    both the accelerator and the CPU; it is kept only if the output matches (PSNR >= 40 dB)
+    and it is actually faster. CoreML in particular may not support every SwinIR op (6-D
+    window reshapes) and then partitions the graph, which can be slower than plain CPU.
+    The verdict is cached in DATA_DIR/accel_check.json.
+    """
     backend = "onnx"
+    MIN_PSNR = 40.0
 
     def __init__(self, force_cpu: bool = False):
         super().__init__()
         import onnxruntime as ort
         self._ort = ort
-        self.use_dml = not force_cpu and "DmlExecutionProvider" in ort.get_available_providers()
+        self.accel_name, self._accel_providers = (None, []) if force_cpu else self._detect_accel()
+        self.use_accel = bool(self._accel_providers)
+        self.accel_checks: dict[str, dict] = {}
         self._apply_device()
 
+    def _detect_accel(self) -> tuple[str | None, list]:
+        avail = self._ort.get_available_providers()
+        if sys.platform == "win32" and "DmlExecutionProvider" in avail:
+            return "DirectML", [("DmlExecutionProvider", {"performance_preference": "high_performance"})]
+        if sys.platform == "darwin" and "CoreMLExecutionProvider" in avail:
+            cache = config.DATA_DIR / "coreml_cache"
+            cache.mkdir(parents=True, exist_ok=True)
+            return "CoreML", [("CoreMLExecutionProvider", {
+                "ModelFormat": "MLProgram", "MLComputeUnits": "ALL",
+                "RequireStaticInputShapes": "1", "ModelCacheDirectory": str(cache)})]
+        return None, []
+
     def _apply_device(self) -> None:
-        if self.use_dml:
+        if self.use_accel:
             self.supersample, self.default_rate = 2.0, 0.7
         else:
             # CPU is ~13x slower: drop supersampling (4x less work) to keep it usable
             self.supersample, self.default_rate = 1.0, 8.0
 
-    def device_info(self) -> dict:
-        if self.use_dml:
-            return {"device": "gpu", "backend": "DirectML", "name": "GPU 加速（DirectML）"}
-        return {"device": "cpu", "backend": "CPU", "name": "CPU（未检测到可用显卡，处理较慢）"}
+    def _fallback(self, why: str) -> None:
+        log.warning("%s disabled (%s); using CPU", self.accel_name, why)
+        self.use_accel = False
+        self._apply_device()
 
-    def _session(self, path: str, dml: bool):
+    def device_info(self) -> dict:
+        if self.use_accel:
+            info = {"device": "gpu", "backend": self.accel_name, "name": f"GPU 加速（{self.accel_name}）"}
+        else:
+            info = {"device": "cpu", "backend": "CPU", "name": "CPU（未检测到可用的加速硬件，处理较慢）"}
+        if self.accel_checks:
+            info["accel_checks"] = self.accel_checks
+        return info
+
+    def _session(self, path: str, accel: bool):
         so = self._ort.SessionOptions()
         so.enable_mem_pattern = False  # required by the DirectML EP
         so.execution_mode = self._ort.ExecutionMode.ORT_SEQUENTIAL
         so.log_severity_level = 3
-        if dml:
-            providers = [("DmlExecutionProvider", {"performance_preference": "high_performance"}),
-                         "CPUExecutionProvider"]
-        else:
-            providers = ["CPUExecutionProvider"]
+        providers = [*self._accel_providers, "CPUExecutionProvider"] if accel else ["CPUExecutionProvider"]
         return self._ort.InferenceSession(path, so, providers=providers)
+
+    # -- one-time correctness / speed check of the accelerated path --------
+    @staticmethod
+    def _check_file() -> Path:
+        return config.DATA_DIR / "accel_check.json"
+
+    def _check_key(self, path: str) -> str:
+        st = Path(path).stat()
+        return f"{self.accel_name}|ort{self._ort.__version__}|{Path(path).name}|{st.st_size}|{int(st.st_mtime)}"
+
+    def _verify_accel(self, path: str, accel_sess) -> bool:
+        key = self._check_key(path)
+        try:
+            cache = json.loads(self._check_file().read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            cache = {}
+        if key in cache:
+            self.accel_checks[Path(path).name] = cache[key]
+            return cache[key]["ok"]
+        x = np.random.default_rng(0).random((1, 3, ONNX_TILE, ONNX_TILE), dtype=np.float32)
+        try:
+            accel_sess.run(None, {"input": x})  # warm-up (CoreML compiles on first run)
+            t0 = time.perf_counter()
+            a = accel_sess.run(None, {"input": x})[0]
+            t_accel = time.perf_counter() - t0
+        except Exception as e:
+            result = {"ok": False, "reason": f"error: {e}"[:300]}
+        else:
+            cpu = self._session(path, False)
+            t0 = time.perf_counter()
+            c = cpu.run(None, {"input": x})[0]
+            t_cpu = time.perf_counter() - t0
+            mse = float(np.mean((np.clip(a, 0, 1) - np.clip(c, 0, 1)) ** 2))
+            psnr = 99.0 if mse == 0 else 10 * math.log10(1 / mse)
+            ok = psnr >= self.MIN_PSNR and t_accel < 0.9 * t_cpu
+            reason = "" if ok else ("output differs from CPU" if psnr < self.MIN_PSNR else "not faster than CPU")
+            result = {"ok": ok, "psnr_db": round(psnr, 1), "accel_s": round(t_accel, 3), "cpu_s": round(t_cpu, 3),
+                      "reason": reason}
+        log.info("accelerator check %s: %s", key, result)
+        cache[key] = result
+        try:
+            self._check_file().parent.mkdir(parents=True, exist_ok=True)
+            self._check_file().write_text(json.dumps(cache, indent=2), encoding="utf-8")
+        except OSError:
+            pass
+        self.accel_checks[Path(path).name] = result
+        return result["ok"]
 
     def _load(self, spec: ModelSpec):
         meta = MODELS.get(spec.name)
         if not meta or "onnx" not in meta or spec.denoise is not None:
             raise KeyError(f"模型 {spec.name} 没有 ONNX 版本")
         path = str(config.MODELS_DIR / meta["onnx"])
-        if self.use_dml:
+        if self.use_accel:
             try:
-                return self._session(path, True)
+                sess = self._session(path, True)
+                if self._verify_accel(path, sess):
+                    return sess
+                self._fallback(self.accel_checks[Path(path).name]["reason"])
             except Exception as e:  # driver/adapter problems: fall back for good
-                log.warning("DirectML unavailable (%s); falling back to CPU", e)
-                self.use_dml = False
-                self._apply_device()
+                self._fallback(str(e))
         return self._session(path, False)
 
     def upscale(self, rgb, spec, progress=None):
@@ -341,11 +422,9 @@ class OnnxEngine(SREngine):
                 return run_tiled(rgb, self.scale_of(spec), T, config.TILE_OVERLAP,
                                  make_infer(self.get(spec)), progress)
             except Exception as e:
-                if not self.use_dml:
+                if not self.use_accel:
                     raise
-                log.warning("DirectML inference failed (%s); retrying on CPU", e)
-                self.use_dml = False
-                self._apply_device()
+                self._fallback(f"inference failed: {e}")
                 self._cache.clear()
                 return run_tiled(rgb, self.scale_of(spec), T, config.TILE_OVERLAP,
                                  make_infer(self.get(spec)), progress)

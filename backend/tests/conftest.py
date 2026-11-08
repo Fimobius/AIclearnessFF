@@ -33,3 +33,22 @@ def make_image(w=96, h=64, mode="RGB", fmt="JPEG", seed=0, **save_kw) -> bytes:
 def engine():
     from app.imaging.sr import get_engine
     return get_engine()
+
+
+FONT_CANDIDATES = [
+    "C:/Windows/Fonts/msyh.ttc",  # Windows: Microsoft YaHei
+    "/System/Library/Fonts/PingFang.ttc",  # macOS
+    "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "/System/Library/Fonts/STHeiti Medium.ttc",
+    "/Library/Fonts/Arial Unicode.ttf",
+]
+
+
+def cjk_font(size: int):
+    """A font that can draw Chinese where available (Windows / macOS), else Pillow's built-in."""
+    from pathlib import Path
+    from PIL import ImageFont
+    for p in FONT_CANDIDATES:
+        if Path(p).exists():
+            return ImageFont.truetype(p, size)
+    return ImageFont.load_default(size)

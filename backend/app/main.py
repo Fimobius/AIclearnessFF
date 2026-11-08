@@ -35,7 +35,7 @@ from .worker import Worker, job_dir
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("aiclear")
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 worker: Worker | None = None
 
 

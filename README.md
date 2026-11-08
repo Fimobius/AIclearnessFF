@@ -5,7 +5,9 @@
 批量上传模糊、低清图片 → AI 超分辨率高清化 → 按尺寸模板（宽度 + 宽高比）输出标准规格图片。
 全部在本机处理，图片不上传任何第三方；不改动原图主体、构图和色调，看不清的小文字不让 AI 乱补。
 
-- **下载即用（Windows 10 / 11，64 位）**：到 [Releases](https://github.com/Fimobius/AIclearnessFF/releases) 下载 `AIClear-v*-Windows-x64.zip`，解压后双击 `Start AIClear.bat`
+- **下载即用**：到 [Releases](https://github.com/Fimobius/AIclearnessFF/releases) 下载
+  - Windows 10 / 11（64 位）：`AIClear-v*-Windows-x64.zip`，解压后双击 `Start AIClear.bat`
+  - macOS 13.4+：Apple 芯片 `AIClear-v*-macOS-arm64.zip`，Intel `AIClear-v*-macOS-x64.zip`，解压后按住 Control 点击 `Start AIClear.command` → 打开（详见 [第 7 节](#7-macos-版)）
 - 面向：素材运营、美工；网页界面 + REST API
 
 ---
@@ -18,7 +20,7 @@
 4. [技术方案](#4-技术方案)
 5. [需求分析（规划阶段）](#5-需求分析规划阶段)
 6. [开发者指南](#6-开发者指南)
-7. [macOS 部署分析](#7-macos-部署分析)
+7. [macOS 版](#7-macos-版)
 8. [第三方组件与许可](#8-第三方组件与许可)
 
 ---
@@ -30,7 +32,7 @@
 3. 拖入图片 → 勾选 → 设置档位、尺寸、缩放方式、导出格式 → 开始处理 → 对比 → 下载
 4. 关闭黑色窗口即退出
 
-首次运行若出现「Windows 已保护你的电脑」，点「更多信息 → 仍要运行」。
+首次运行若出现「Windows 已保护你的电脑」，点「更多信息 → 仍要运行」。刚解压后的第一次启动，系统会对程序文件做安全扫描，可能要等 1–3 分钟；之后启动只需几秒。
 
 | 项目 | 要求 |
 |---|---|
@@ -335,17 +337,25 @@ backend/.venv/Scripts/python eval/stress_test.py --n 200       # 压力 + 崩溃
 ### 6.3 打包发行版
 
 ```bash
-backend/.venv/Scripts/python scripts/build_release.py
-# → build/AIClear-v<版本>-Windows-x64.zip
-backend/.venv/Scripts/python scripts/test_package.py <解压后的 AIClear 目录> [--cpu]
+backend/.venv/Scripts/python scripts/build_release.py                 # 三个平台都打包
+backend/.venv/Scripts/python scripts/build_release.py macos-arm64     # 或只打一个：windows-x64 / macos-arm64 / macos-x64
+# → build/AIClear-v<版本>-{Windows-x64, macOS-arm64, macOS-x64}.zip
+backend/.venv/Scripts/python scripts/test_package.py <解压后的 AIClear 目录> [--cpu]   # 运行包内自检
+backend/.venv/Scripts/python scripts/inspect_mac_package.py build/AIClear-v<版本>-macOS-arm64.zip arm64
 ```
+
+Mac 包可以在 Windows 上组装：Python 运行时与 macOS 依赖都是现成的二进制，脚本最后逐个检查 Mach-O 文件的架构和最低系统版本。
 
 发行版内容：
 - 可移动的 CPython 3.12（python-build-standalone）与依赖
 - 随程序附带的 MSVC 运行库（app-local，用户无需安装 VC++ 运行库）
 - 后端代码、构建好的网页
 - 两个 SwinIR ONNX 模型和文字检测模型
-- 启动器（自动选空闲端口、检测已运行实例、自动打开浏览器）
+- 启动器：
+  - 自动选空闲端口
+  - 端口记录在 `data/server.json`，第二次启动直接打开已运行的实例
+  - 自动打开浏览器
+- 包内自检 `selftest.py`（Mac 上双击 `Run Self-Test.command`）
 
 冒烟测试做法：
 - 只留系统目录在 PATH 上，确认不依赖开发环境
@@ -380,84 +390,109 @@ curl -F "files=@a.jpg" -F "files=@b.png" -F "start=true" \
 
 ---
 
-## 7. macOS 部署分析
+## 7. macOS 版
 
-**目标系统：macOS 13 Ventura 及以上**（不支持 macOS 12）。
+**状态：v1.1.0 已实现并打包（Apple 芯片 / Intel 各一个），本机能做的验证全部通过，等待 Mac 真机验收。** 系统要求 **macOS 13.4 Ventura 或更新**。
 
-**结论：可以部署，但要单独做一个 Mac 版本，并在真机上验收。**
-- 核心算法、模型和网页不用改
-- 需要替换 Windows 专属的部分：DirectML 加速、`.bat` 启动、VC++ 运行库、打包脚本
-- 依赖要锁定到 macOS 13 能装的版本
-- 预计工作量：1–2 天开发，另加真机测试
+### 7.1 使用方法（Mac）
 
-### 7.1 各组件在 macOS 13 上的情况
+1. 按芯片下载：Apple 芯片（M1–M4）选 `AIClear-v*-macOS-arm64.zip`，Intel 选 `AIClear-v*-macOS-x64.zip`
+2. 双击解压，**按住 Control 键点击 `Start AIClear.command` → 打开**（本程序未做 Apple 签名，第一次需要这样打开）
+3. 浏览器自动打开操作页面；关闭终端窗口即退出
+4. 数据在 `~/Library/Application Support/AIClear/data`
+5. 双击 `Run Self-Test.command` 可自检，生成 `selftest_report.txt`
 
-以下数据直接查自 PyPI 安装包的平台标签：标签 `macosx_14_0` 的包装不到 13 上。
+### 7.2 与 Windows 版的差异
 
-| 组件 | Windows 版用的版本 | macOS 支持情况 | Mac 版方案 |
-|---|---|---|---|
-| ONNX Runtime | 1.24.4 | 1.24 起只支持 macOS 14+ 的 Apple 芯片 | **锁定 1.23.2**：最后一个支持 macOS 13 的版本，Intel 和 Apple 芯片都有 |
-| OpenCV | 5.0.0.93 | Apple 芯片：5.0 仍支持 13；Intel：4.13 起要求 14 | **锁定 4.12.0.88**：两种芯片都支持 macOS 13 |
-| NumPy | 2.5.4 | 有 macOS 13 的包，但 OpenCV 4.12 要求 NumPy < 2.3 | **锁定 2.2.6** |
-| Pillow / Pydantic / FastAPI | 当前版本 | 仍提供 10.13（Intel）、11.0（Apple 芯片）起的包 | 不用改 |
-| Python 3.12 运行时 | python-build-standalone | 官方说明 Intel ≥ 10.13、Apple 芯片 ≥ 11 | 不用改，需真机确认 |
-| PyTorch | 只用于开发 | 新版只支持 macOS 14+ 的 Apple 芯片 | Mac 版不需要（用 ONNX） |
-| 网页界面 | 已面向 Safari 15+ 构建 | macOS 13 自带 Safari 16，可升级到 18 | 不用改 |
-| 字体 | Bahnschrift（Windows 自带） | macOS 没有 | 已有后备字体 DIN Alternate、PingFang SC |
-
-**已验证**：在本机用 ONNX Runtime 1.23.2 + OpenCV 4.12.0.88 + NumPy 2.2.6（与 Mac 版要锁定的版本相同，Windows 版本的包）跑完全部 84 项测试，全部通过。说明模型文件、文字检测、整条流水线在这组版本上都能工作。
-
-**未验证**（必须在 Mac 上测）：
-- CoreML 加速的实际效果
-- macOS 运行时本身
-- Gatekeeper 安全提示
-- 真实性能
-
-### 7.2 需要的改动
-
-1. **推理加速**：Windows 用 DirectML，Mac 改用 ONNX Runtime 自带的 CoreML 后端（`CoreMLExecutionProvider`），可用 Apple GPU 和神经网络引擎，不支持的算子自动回退 CPU。SwinIR 的注意力算子不一定都能在 CoreML 上运行，可能部分回退 CPU，需要实测；改动集中在 `backend/app/imaging/sr.py` 的 `OnnxEngine`
-2. **启动方式**：
-   - `.bat` 换成 `.command` 脚本，或用 PyInstaller 打成 `.app`
-   - 数据目录改为 `~/Library/Application Support/AIClear`
-3. **打包脚本**：
-   - 不需要 VC++ 运行库，改用 macOS 版 Python 运行时
-   - 依赖可以在 Windows 上用 `pip download --platform macosx_13_0_arm64` / `macosx_13_0_x86_64` 下载组装
-   - Apple 芯片和 Intel 各出一个包
-4. **签名与公证**：
-   - 未签名的程序下载后会被 Gatekeeper 拦截，提示「无法验证开发者」。内部使用可以「右键 → 打开」，或执行 `xattr -dr com.apple.quarantine AIClear`
-   - 对外分发需要 Apple 开发者账号（99 美元 / 年），在 Mac 上用 `codesign` 签名、`notarytool` 公证，只能在 Mac 上完成
-
-### 7.3 硬件与性能预期
-
-macOS 13 支持 2017 年及以后的 Intel Mac 和所有 Apple 芯片 Mac。
-
-| 机型 | 加速 | 预计速度（1200×1200） |
+| 方面 | Windows | macOS |
 |---|---|---|
-| Apple 芯片（M1 及以后） | CoreML 或 CPU | 预计在 Windows 独显与 CPU 之间，需实测 |
-| Intel Mac（2017–2020） | 基本只能 CPU | 预计 15–60 秒 / 张；可再调小超采样 |
+| 推理加速 | ONNX Runtime + DirectML（任意 DX12 显卡） | ONNX Runtime + CoreML（Apple GPU / 神经网络引擎） |
+| 依赖版本 | ONNX Runtime 1.24.4、OpenCV 5.0、NumPy 2.5 | ONNX Runtime 1.23.2、OpenCV 4.12、NumPy 2.2（支持 macOS 13 的最新版本） |
+| 启动 | `Start AIClear.bat` | `Start AIClear.command`（首次打开后自动清除本文件夹的下载隔离标记） |
+| 数据位置 | 程序目录 `data`（不可写时 `%LOCALAPPDATA%`） | `~/Library/Application Support/AIClear`（不写入程序目录） |
+| 运行库 | 自带 MSVC 运行库 | 不需要 |
 
-### 7.4 测试条件
+模型、算法、网页、文字保护、所有功能完全相同。
 
-- GitHub 云端的 macOS 13 机器已停用，现在只提供 macOS 14 以上。云端 CI 可以跑 macOS 14/15 Apple 芯片；macOS 13 和 Intel Mac 需要真机，或在 Mac 上用 UTM / Parallels 装虚拟机
-- 验收可直接复用 `backend/tests` 和 `scripts/test_package.py`（启动部分要先改成 macOS 版）
+### 7.3 关键技术工作
 
-### 7.5 建议路线
+**1. 让 SwinIR 能整块跑在 CoreML 上**
 
-| 方案 | 说明 | 适合 |
-|---|---|---|
-| A. 原生 Mac 版（推荐） | 按 7.2 做 Apple 芯片和 Intel 两个包，锁定 7.1 的版本，未签名先内部用 | 美工在自己的 Mac 上离线使用 |
-| B. 一台 Windows 当服务器 | 不做 Mac 版：在有显卡的 Windows 上运行本程序，开启访问密钥后共享到局域网，Mac 用 Safari 访问 | 最快：Mac 上什么都不用装，速度取决于 Windows 机器 |
-| C. Docker | macOS 上 Docker 不能用 GPU，只能跑 CPU，并且要装 Docker Desktop | 不推荐 |
+用 ONNX Runtime 官方的分析工具检查，原始导出的 SwinIR 会被 CoreML 切成 **111 块**，在 CoreML 和 CPU 之间来回切换。工具判断「很可能比纯 CPU 还慢」。原因和处理（只在导出时改写，与原模型数学上完全等价，输出与原始 PyTorch 模型逐像素一致，PSNR 120 dB）：
 
-如果近期只是少数 Mac 用户，先用方案 B，现有程序已经支持。在 Windows 上新建一个 `.bat`：
+| 原因 | 处理 |
+|---|---|
+| `q, k, v = qkv[0], qkv[1], qkv[2]` 导出为标量 Gather，CoreML 不支持 | 改用 `torch.split` |
+| 窗口切分 / 还原用 6 维张量，CoreML 最多 5 维 | 固定批大小 1，改写为 5 维 |
+| 相对位置偏置、移位窗口掩码在运行时计算 | 按固定 256 瓦片预先算成常量 |
+| 形状运算在运行时计算，CoreML 看到的是动态形状 | 用 ONNX Runtime 基础级优化折叠成常量（与执行后端无关，可跨平台） |
 
-```bat
-set AICLEAR_HOST=0.0.0.0
-set AICLEAR_API_KEY=换成你自己的密钥
-call "Start AIClear.bat"
-```
+改写后：**1 块，1769 / 1769 个节点全部由 CoreML 执行**，工具判断「should perform well: YES」。
 
-启动后黑色窗口会显示局域网地址。Mac 用 Safari 打开该地址，按提示输入密钥即可。需要离线使用或 Mac 用户很多时，再做方案 A。
+另外两点：
+- 官方分析工具会把 Resize 的空可选输入误判为「动态形状」，`scripts/coreml_coverage.py` 修正了这一点
+- 改写后的模型在 Windows 上也略快：DirectML 0.58 → 0.50 秒 / 瓦片
+
+**2. 首次运行自检（加速是否可信）**
+
+第一次加载每个模型时，同一个瓦片分别在加速后端和 CPU 上各跑一次，只有同时满足以下两点才启用加速，否则自动改用 CPU：
+- 输出一致（PSNR ≥ 40 dB）
+- 确实更快
+
+结果缓存，只做一次。这一机制同时防止 CoreML 低精度计算出错、Windows 显卡驱动异常等情况。本机 DirectML 实测：PSNR 129.7 dB，0.66 秒对比 CPU 8.1 秒，启用。
+
+**3. 在 Windows 上组装 Mac 包，并逐个检查二进制文件**
+
+- Python 运行时用 python-build-standalone 官方 macOS 版，按 SHA-256 校验
+- 依赖用 uv 按 macOS 13 平台下载
+- 用 `scripts/macho_minos.py` 读取包内每个 Mach-O 二进制的最低系统版本和 CPU 架构
+- 这个检查发现：ONNX Runtime 1.23 的安装包标的是 macOS 13.0，但二进制实际要求 **13.4**（1.20–1.22 实际要求 13.3）。只看安装包标签会在 13.0–13.3 上启动失败，所以最低要求定为 13.4。Ventura 用户可以在「软件更新」里免费升到 13.7
+- `scripts/inspect_mac_package.py` 检查：
+  - 架构正确（protobuf 为 universal2）
+  - 没有 Windows 文件混入
+  - 依赖版本与锁定一致
+  - 启动脚本可执行且为 LF 换行
+
+### 7.4 已验证与待验证
+
+| 项目 | 状态 |
+|---|---|
+| 代码与模型在 Mac 版依赖版本上运行（ONNX Runtime 1.23.2 + OpenCV 4.12 + NumPy 2.2） | ✅ 本机全部测试通过 |
+| 改写后的模型与原模型一致 | ✅ PSNR 120 dB（PyTorch / DirectML / CPU） |
+| CoreML 算子覆盖 | ✅ 100%，1 个分区（静态分析） |
+| 包内所有二进制：架构、最低系统版本 | ✅ arm64 / x86_64 全部 ≤ 13.4 |
+| 首次运行加速自检的各种失败情况 | ✅ 单元测试：输出不一致、更慢、崩溃、缓存 |
+| 自检脚本 `selftest.py` | ✅ 在 Windows 包上通过 |
+| CoreML 实际速度与精度 | ⏳ 需 Mac 真机 |
+| Gatekeeper / 隔离标记处理、`.command` 启动 | ⏳ 需 Mac 真机 |
+| Intel Mac（x64 包） | ⏳ 需 Intel Mac 或其上的 macOS 13 |
+
+### 7.5 真机验收步骤
+
+1. 在 Mac 上下载对应的 zip，解压
+2. 按住 Control 点击 `Run Self-Test.command` → 打开，等待显示「自检通过 / 自检失败」
+3. 把生成的 `selftest_report.txt` 发回。报告里包括：
+   - 系统版本和芯片
+   - 选中的后端（CoreML 或 CPU）
+   - 加速自检结果（PSNR、加速与 CPU 耗时）
+   - 每张测试图的耗时和结果
+   - 服务日志
+4. 再按 7.1 正常使用一次，确认浏览器、拖拽上传、对比、下载都正常
+
+### 7.6 对外分发（可选）
+
+未签名的程序第一次需要「Control + 点击 → 打开」。如果要让用户直接双击打开，需要：
+- 注册 Apple 开发者账号（99 美元 / 年）
+- 在 Mac 上用 `codesign` 签名，用 `notarytool` 公证
+
+---
+
+## 版本记录
+
+| 版本 | 内容 |
+|---|---|
+| v1.1.0 | 新增 macOS 版（Apple 芯片 / Intel，macOS 13.4+，CoreML 加速）<br>SwinIR 改写为对加速器友好的等价形式（CoreML 1 个分区；DirectML 也略快）<br>首次运行自动校验加速后端的正确性和速度，不合格自动改用 CPU<br>修复 Windows 每次启动多等约 100 秒的问题（逐个探测空端口）<br>启动器、自检脚本跨平台 |
+| v1.0.0 | 首个 Windows 版：AI 高清化（两档）、尺寸模板、三种缩放、小文字保护、保真校验、批量队列、对比、ZIP、REST API |
 
 ---
 

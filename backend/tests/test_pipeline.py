@@ -102,7 +102,8 @@ def _text_image(font_px: int, w=1024, h=512, scale=4) -> bytes:
     from PIL import ImageDraw, ImageFont
     im = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(im)
-    f = ImageFont.truetype("C:/Windows/Fonts/msyh.ttc", font_px)
+    from conftest import cjk_font
+    f = cjk_font(font_px)
     d.text((40, 40), "净含量 500g 6901234567892", font=f, fill=(20, 20, 20))
     d.text((40, 40 + font_px * 2), "生产日期 2026-11-08", font=f, fill=(150, 20, 20))
     im = im.resize((w // scale, h // scale), Image.Resampling.LANCZOS)

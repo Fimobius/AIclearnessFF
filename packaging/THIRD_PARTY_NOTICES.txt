@@ -11,9 +11,9 @@ Models
 
 Runtime
   CPython 3.12 (python-build-standalone)      Python Software Foundation License
-  ONNX Runtime (DirectML build)               MIT License, Microsoft
-  DirectML.dll                                Microsoft DirectML redistributable license
-  Microsoft Visual C++ runtime DLLs           Microsoft Visual C++ Redistributable license
+  ONNX Runtime (DirectML build on Windows)    MIT License, Microsoft
+  DirectML.dll (Windows package only)         Microsoft DirectML redistributable license
+  Microsoft Visual C++ runtime (Windows only) Microsoft Visual C++ Redistributable license
   OpenCV (opencv-python-headless)             Apache License 2.0
   NumPy                                       BSD 3-Clause
   Pillow                                      MIT-CMU License
@@ -21,4 +21,4 @@ Runtime
   Uvicorn, python-multipart                   BSD 3-Clause / Apache 2.0
   React                                       MIT License
 
-Licence texts of the Python packages are in runtime/Lib/site-packages/*.dist-info/.
+Licence texts of the Python packages are in the runtime's site-packages/*.dist-info/.
